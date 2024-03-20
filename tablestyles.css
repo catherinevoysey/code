@@ -1,0 +1,71 @@
+/*Details of the grid container, 18 same size columns and 9 rows are produced*/ 
+.grid-container {
+    display:grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(9,auto);
+    gap: 5px;
+    
+}
+/*First breakpoint is used to replace the grid with an image by not displaying the grid and then displaying image*/
+@media screen and (max-width: 600px) {
+   .grid-container {
+    display: none;
+   }
+    
+   .grid-image {
+    display: block;
+    width: 100%;
+    height:auto;
+   }
+}
+/*Second breakpoint is used to not show the image when the screen is big enough*/
+   @media screen and (min-width: 601px) {
+   .grid-image {
+    display: none;
+   } 
+}
+/*Body styling below*/
+body {
+    border: 10px white solid;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+/*All element types are coloured using class attribute*/
+div.item1 { 
+    background-color: white;
+}
+div.halogen {
+    background-color: lightskyblue;
+    }
+div.noble {
+    background-color: blueviolet;
+}
+div.alkali {
+    background-color: red;
+}
+div.alkaline {
+    background-color: orange;
+}
+div.metaloid {
+    background-color: green;
+}
+div.basic {
+    background-color: greenyellow;
+}
+div.nonmetal { 
+    background-color: aliceblue;
+}
+div.actinide {
+    background-color: pink;
+}
+div.lanthanide {
+    background-color: rgb(250, 59, 91);
+}
+div.transition {
+    background-color: grey;
+}
